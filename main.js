@@ -17,7 +17,7 @@ function generarTexto() {
      btn.classList.add('loading');
      respuestaDiv.textContent = 'Cargando...';
 
-    fetch('https://be45-45-171-182-157.ngrok-free.app/generate', {
+    fetch('https://6f6d-45-171-182-157.ngrok-free.app', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

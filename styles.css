@@ -1,0 +1,96 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    resize: vertical;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#respuesta {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    word-wrap: break-word;
+    overflow-y: auto; /* Agrega la barra de desplazamiento vertical */
+    max-height: 300px; /* Agrega una altura máxima */
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    display: none; /* Oculto por defecto */
+    margin-left: 10px;
+}
+
+.loading .loader {
+    display: inline-block; /* Mostrar durante la carga */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.model-selector {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    appearance: none; /* Elimina los estilos predeterminados del navegador */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Agrega una flecha */
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    width: 200px; /* Ajusta el ancho según sea necesario */
+}
+
+.model-selector:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
